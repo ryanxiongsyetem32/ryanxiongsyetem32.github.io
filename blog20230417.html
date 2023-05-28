@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>平均分的编程实现</title>
+    </head>
+    <body>
+        <h2>平均分</h2>
+        <p>一年级1班有i个人，他们刚刚举行了一次数学考试，分数有你输入，输入i个人的分数（一次输一个），输出平均分。</p>
+        <p><b>请你用Python和C++实现一下。</b></p>
+        <p>解答：此重复类型需要用到<b>for循环函数</b>。</p>
+        <p>for循环在Python中的用法：
+            for i in range(重复次数):
+                重复循环内容代码
+        </p>
+        <p>for循环在C++中的用法：
+            for(变量=1, 变量&lt;变量++){
+            }
+            其中“变量=1”是变量初始化，“变量&lt;”是for循环运行条件，“变量++”是变量的变化过程。
+        </p>
+        <p>区间是变量&lt;=i，把这些增加的数值添加进sum变量中。最后，记得要除以i，计算平均数哟！</p>
+        <p>代码</p>
+        <p>Python源码：</p>
+            <pre>
+                <code>    
+                    i = input("i")
+                        i = int(i)
+                        sum = 0
+                        b = 0
+                        for a in range(i):
+                            b = input("b")
+                            b = int(b)
+                            sum += b
+                        sum = sum / i
+                        print(sum)
+                </code>
+            </pre>
+        <p>C++源码：</p>
+        <div>
+            <pre>
+                <code class="language-c++">
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+                
+int main() {
+    int i;
+    scanf("%d", &i);
+    int sum;
+    sum = 0;
+    int b;
+    int a;
+    for (a = 1; a &lt;= i; a++) {
+        scanf("%d", &b);
+        sum = sum + b;
+    }
+    sum = sum / i;
+    printf("%d", sum);
+    return 0;
+}
+                </code>
+            </pre>
+        </div>
+        <p>谢谢大家！</p>
+        <a href="index.html"><button>返回首页</button></a>
+    </body>
+    <style>
+        .python{
+            background-color: #eee;
+        }
+        .c{
+            background-color: #eee
+        }
+    </style>
+</html>

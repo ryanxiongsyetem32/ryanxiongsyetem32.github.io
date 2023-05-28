@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>计算短信费</title>
+    </head>
+    <body>
+        <h4>计算短信费</h4>
+        <p>题干：假设每一条少于70字短信是0.1元，每70字是0.1元，不到按70字计算，请问总共需要多少钱？</p>
+        <p>要求：第一行输入一个整数a，表示短信数量，之后输入[短信数量]次短信字数，最后得出总价格。</p>
+        <p><b>请使用c++实现。</b></p>
+        <p>
+            <br>
+            <br>
+            <br>
+            这需要使用到向上取整函数，而向上取整在c++中的用法是ceil()。其次，总字数是整数，价钱是浮点数，总价钱也是浮点数。最终代码为：
+        </p>
+        <p>
+            <br>
+            #include &lt;bits/stdc++.h&gt;<br>
+            using namespace std;<br>
+            <br>
+            int main() {<br>
+                int char_num;<br>
+                double money_sum;<br>
+                int i;<br>
+                int a;<br>
+                double p;<br>
+                money_sum = 0;<br>
+                scanf("%d", &a);<br>
+                for (i = 1; i &lt;= a; i++) {<br>
+                    scanf("%d", &char_num);<br>
+                    p = ceil(char_num / 70.0) * 0.1;<br>
+                    money_sum += p;<br>
+                }<br>
+                printf("%lf", money_sum);<br>
+                return 0;<br>
+            }<br>
+        </p>
+        <p>本期到此结束，谢谢大家！</p>
+        <a href="index.html"><button>返回首页</button></a>
+        <a href="blog.html"><button>更多文章</button></a>
+    </body>
+</html>
